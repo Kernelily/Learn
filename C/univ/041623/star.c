@@ -16,13 +16,21 @@
  */
 #include <stdio.h>
 
-int main() {
-    int howMany = 0;
+int star(int quantity);
 
-    printf("몇번 찍어? => ");
-    scanf("%d", &howMany);
+int main() {
+    int howMany = 5;
+
+    // printf("몇번 찍어? => ");
+    // scanf("%d", &howMany);
+
+    star(howMany);
     
-    for (int i = 1; i <= howMany; i++) {
+    return 0;
+}
+
+int star(int quantity) {
+    for (int i = 1; i <= quantity; i++) {
         for (int k = 1; k <= i; k++) {
             printf("* ");
         }
