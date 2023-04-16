@@ -5,7 +5,6 @@
 *.swp
 
 # Ignore Compiled
-!target/
 target/*
 build/
 
