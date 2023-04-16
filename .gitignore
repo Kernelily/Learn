@@ -1,0 +1,17 @@
+# Ignore Mac Resource Fork
+.DS_Store
+
+# Ignore Vim Temporary File
+*.swp
+
+# Ignore Compiled
+!target/
+target/*
+build/
+
+## But not to omit target folder
+!target/target.md
+
+# Ignore Log & Configuration
+config/
+logs/
