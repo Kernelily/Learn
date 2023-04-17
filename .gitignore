@@ -5,11 +5,20 @@
 *.swp
 
 # Ignore Compiled
-target/*
+C/target/**
+C++/target/**
+Java/target/**
+Rust/target/**
+Swift/target/**
+
 build/
 
 ## But not to omit target folder
-!target/target.md
+!C/target/target.md
+!C++/target/target.md
+!Java/target/target.md
+!Rust/target/target.md
+!Swift/target/target.md
 
 # Ignore Log & Configuration
 config/

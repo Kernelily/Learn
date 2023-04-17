@@ -24,14 +24,12 @@
 int exone(void);
 int extrd(void);
 int exfor(void);
-int stupidFunction();
-int recursiveFunc(int count);
 
 /*
  * main Function
  */
 int main(void) {
-    stupidFunction();
+    exfor();
 
     return 0;
 }
@@ -138,45 +136,6 @@ int seeBal() {
 
         printf("\n");
     }
-
-    return 0;
-}
-
-char recursive[] = "개새끼야! 재귀 함수가 뭔데? \
-                    \n 재귀 함수는 존나 귀여운 함수야 ㅋㅋ \
-                    \n 라고 말했어";
-
-int stupidFunction() {
-    char content[] = "어느 날 소프트웨어학부 학생이 내게 와서 물었다. \
-        \n 조교님 재귀 함수가 뭔가요? \
-        \n 옛날에.. 호랑이 어미 삶아지던 시절 어떤 좆같은 놈이 살았더랬지. \
-        \n 그 새끼는 존나 똑똑했지 ㅋㅋ\
-        \n 아아 그 씨발련이 말하기를.. \
-        \n";
-
-    int howMany = 0;
-
-    printf("멍청한 짓 횟수를 입력해봐라 => ");
-
-    scanf("%d", &howMany);
-
-    system("clear");
-    printf("%s", content);
-
-    recursiveFunc(howMany);
-
-    return 0;
-}
-
-int recursiveFunc(int count) {
-    char close[] = "라고 말했어\n";
-    char dashSymbol = '-';
-
-    for (int p = 1; p <= count; p++) {
-        dashSymbol * 2 * p;
-    }
-
-    printf("%s\n%s", recursive, close);
 
     return 0;
 }

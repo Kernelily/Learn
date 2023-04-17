@@ -16,19 +16,28 @@
  */
 #include <stdio.h>
 
+/*
+ * 함수 선언 리전
+ */
 int star(int quantity);
 
+/*
+ * 메인 함수 리전
+ */
 int main() {
     int howMany = 5;
 
-    // printf("몇번 찍어? => ");
-    // scanf("%d", &howMany);
+    printf("몇번 찍어? => ");
+    scanf("%d", &howMany);
 
     star(howMany);
     
     return 0;
 }
 
+/*
+ * 함수 리
+ */
 int star(int quantity) {
     for (int i = 1; i <= quantity; i++) {
         for (int k = 1; k <= i; k++) {
