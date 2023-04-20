@@ -21,6 +21,9 @@ int main() {
    int rows, coef = 1, space, i, j;
    printf("Enter the number of rows: ");
    scanf("%d", &rows);
+
+   printf("\n");
+
    for (i = 0; i < rows; i++) {
       for (space = 1; space <= rows - i; space++)
          printf("  ");
@@ -33,5 +36,8 @@ int main() {
       }
       printf("\n");
    }
+
+    printf("\n");
+
    return 0;
 }
