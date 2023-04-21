@@ -1,9 +1,9 @@
 /*
  * =====================================================================================
  *
- *       Filename:  041723.c
+ *       Filename:  hanoi.c
  *
- *    Description:  4월 17일 강의 코드 
+ *    Description:  하노이탑 재귀함수 사용 
  *
  *        Version:  1.0
  *        Created:  04/17/23 14:12:46
@@ -43,20 +43,14 @@ int main() {
  * Function region
  */
 int sum(int n) {
-    if (n == 1) {
-        return 1;
-    } else if (n > 1) {
-        return sum(n - 1) + n;
-    } else {
-        return 0;
-    }
+    if (n == 1) return 1;
+    else if (n > 1) return sum(n - 1) + n;
+    else return 0;
 }
 
 void hanoi(int n, char a, char b, char c) {
-    if (n < 1)
-        printf("Invalid number of dicss\n");
-    else if (n == 1)
-        printf("원반 %d : %c ==> %c\n", n, a, c);
+    if (n < 1) printf("Invalid number of dicss\n");
+    else if (n == 1) printf("원반 %d : %c ==> %c\n", n, a, c);
     else {
         hanoi(n - 1, a, c, b);
         printf("원반 %d : %c ==> %c\n", n, a, c);

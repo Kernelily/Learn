@@ -25,11 +25,11 @@ const float PI = 3.142592;
 /*
  * Function Declare Region
  */
-int testIO();
-int sumThem();
-int testString();
-int testArrays();
-int testStruct();
+int tIO();
+int tFor();
+int tString();
+int tArrays();
+int tStruct();
 
 /*
  * Main Function Region
@@ -40,25 +40,18 @@ int main() {
     std::cout << "Enter funcName => ";
     std::cin >> funcName;
 
-    if (funcName == "testIO") {
-        testIO();
-    } else if (funcName == "sumThem") {
-        sumThem();
-    } else if (funcName == "testString") {
-        testString();
-    } else if (funcName == "testArrays") {
-        testArrays();
-    } else if (funcName == "testStruct") {
-        testStruct();
-    } else {
-        return main();
-    }
+    if (funcName == "tIO") tIO();
+    else if (funcName == "tFor") tFor();
+    else if (funcName == "tString") tString();
+    else if (funcName == "tArrays") tArrays();
+    else if (funcName == "tStruct") tStruct();
+    else return main();
 }
 
 /*
  * Actual Function Region
  */
-int testIO() {
+int tIO() {
     std::cout << "Hello, world!" << std::endl; // endl equals to "\n"
                                                // cout = char output (see-out)
                                                // insertion operator (<<) to output text
@@ -71,35 +64,24 @@ int testIO() {
     return 0;
 }
 
-int sumThem() {
-    int x, y;
-
-    std::cout << "Type two numbers: ";
-    std::cin >> x >> y;
-
-    std::cout << "Sum of them ==> " << x + y << std::endl;
-
-    return 0;
-}
-
-int testString() {
-    string testStr = "Hahaha...";
+int tString() {
+    string tStr = "Hahaha...";
 
     // length() == size()
-    std::cout << "The length of \"testStr\" is: " << testStr.length() << std::endl;
-    std::cout << "The first letter of \"testStr\" is: " << testStr[0] << std::endl;
+    std::cout << "The length of \"tStr\" is: " << tStr.length() << std::endl;
+    std::cout << "The first letter of \"tStr\" is: " << tStr[0] << std::endl;
 
     // Let me change two letters
-    testStr[0] = 'F';
-    testStr[1] = 'u';
+    tStr[0] = 'F';
+    tStr[1] = 'u';
 
     // Let's print it out!
-    std::cout << "The changed one is: " << testStr << std::endl;
+    std::cout << "The changed one is: " << tStr << std::endl;
 
     return 0;
 }
 
-int testFor() {
+int tFor() {
     for (int i = 0; i <= 10; i += 2) {
         std::cout << "Current Number: " << i << std::endl;
 
@@ -117,7 +99,7 @@ int testFor() {
     return 0;
 }
 
-int testArrays() {
+int tArrays() {
     string myCars[3] = {"F8 Spider", "Ghost", "Chiron"};
     std::cout << "My current car is: " << myCars[0] << std::endl;
 
@@ -130,26 +112,26 @@ int testArrays() {
     return 0;
 }
 
-int testStruct() {
+int tStruct() {
     // Create a structure variable called testStructure
     struct {
         int primary;
         string name;
-    } testStructureA, testStructureB, testStructureC;
+    } tSA, tSB, tSC;
 
     // Assign values to members of testStructure
-    testStructureA.primary = 1;
-    testStructureA.name = "Kernel";
+    tSA.primary = 1;
+    tSA.name = "Kernel";
 
-    testStructureB.primary = 2;
-    testStructureB.name = "AHahahha";
+    tSB.primary = 2;
+    tSB.name = "AHahahha";
 
-    testStructureC.primary = 3;
-    testStructureC.name = "OMG";
+    tSC.primary = 3;
+    tSC.name = "OMG";
 
     // Print members of testStructure
-    std::cout << "The value of testStructure.primary is: " << testStructureA.primary << std::endl;
-    std::cout << "The value of testStructure.name is: " << testStructureA.name << std::endl;
+    std::cout << "The value of tSA.primary is: " << tSA.primary << std::endl;
+    std::cout << "The value of tSA.name is: " << tSA.name << std::endl;
 
     // Named Structures
     // semi-colon is required...
