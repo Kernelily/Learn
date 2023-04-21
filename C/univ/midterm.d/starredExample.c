@@ -14,6 +14,10 @@ int E310(); int E435();
  */
 int main() {
     int funcNum;
+    int funcList[5] = {217, 218, 34, 310, 435};
+
+    printf("List of Functions => ");
+    for (int i = 0; i < 5; i++) (i < 4) ? printf("%d / ", funcList[i]) : printf("%d\n", funcList[i]); 
 
     printf("Enter Function Number => ");
     scanf("%d", &funcNum);
