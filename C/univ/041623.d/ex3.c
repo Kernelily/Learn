@@ -19,7 +19,6 @@
 /*
  * 함수 선언 리전
  */
-
 void stamp(int curr_island, int n);
 void stamp2(int curr_island, int n);
 void stamp3(int curr_island, int n);
@@ -27,7 +26,6 @@ void stamp3(int curr_island, int n);
 /* 
  * 메인함수 리전
  */
-
 int main() {
     int n;
     
@@ -52,7 +50,6 @@ int main() {
 /*
  * 함수 리전
  */
-
 // 문제 3-1번 함수
 void stamp(int curr_island, int n) {
     if (curr_island > n) return; // n보다 크면 종료

@@ -24,7 +24,7 @@ int main() {
         case 34 : E34(); break;
         case 310 : E310(); break;
         case 435 : E435(); break;
-        default : main(); break;
+        default : return main(); break;
     }
 
     return 0;
