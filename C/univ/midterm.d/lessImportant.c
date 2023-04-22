@@ -1,15 +1,17 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 #define PI 3.1415921648
 
 /*
  * Function Declare Region
  */
+
+void printFuncLD();
+
 int E25(); int E27(); int E28();
 int E211(); int E212(); int E216();
-int E32(); int E36();
-
-int E41();
+int E32(); int E36(); int E41();
 
 /*
  * Main Function Region
@@ -17,8 +19,17 @@ int E41();
 int main() {
     int funcNum;
 
-    printf("Enter Function Number => ");
+    #ifdef _WIN32 
+        system("cls");
+    #else 
+        system("clear");
+    #endif
+
+    printFuncLD();
+
+    printf("예제 번호 => ");
     scanf("%d", &funcNum);
+    printf("\n");
 
     switch (funcNum) {
         case 25 : E25(); break;
@@ -30,10 +41,22 @@ int main() {
         case 32 : E32(); break;
         case 36 : E36(); break;
         case 41 : E41(); break;
-        default : main(); break;
+        default : printf("다시 읽고 실행하세요.\n"); return 0; 
     }
 
+    printf("\n");
+
     return 0;
+}
+
+void printFuncLD() {
+    // funcList
+    int funcList[10] = {25, 27, 28, 211, 212, 216, 32, 36, 41};
+
+    printf("No  | Description\n");
+    for (int i = 0; i <= 8; i++) {
+        printf("%-3d | Description\n", funcList[i]);
+    } 
 }
 
 /*
