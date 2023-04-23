@@ -6,7 +6,6 @@
 /*
  * Function Declare Region
  */
-
 void printFuncLD();
 
 int E25(); int E27(); int E28();
@@ -32,14 +31,10 @@ int main() {
     printf("\n");
 
     switch (funcNum) {
-        case 25 : E25(); break;
-        case 27 : E27(); break;
-        case 28 : E28(); break;
-        case 211 : E211(); break;
-        case 212 : E212(); break;
-        case 216 : E216(); break;
-        case 32 : E32(); break;
-        case 36 : E36(); break;
+        case 25 : E25(); break; case 27 : E27(); break;
+        case 28 : E28(); break; case 211 : E211(); break;
+        case 212 : E212(); break; case 216 : E216(); break;
+        case 32 : E32(); break; case 36 : E36(); break;
         case 41 : E41(); break;
         default : printf("다시 읽고 실행하세요.\n"); return 0; 
     }
@@ -99,7 +94,7 @@ int E211() {
     int tmp; // temporary var
 
     a += 2; // a 값 2 증가
-    printf("a = %d\n", a); // prints 10
+    printf("a = %d, b = %d\n", a, b); // prints 10
 
     // swap a, b using tmp var
     tmp = a; a = b; b = tmp;

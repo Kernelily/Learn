@@ -54,20 +54,13 @@ int main() {
     printf("\n");
 
     switch (funcNum) {
-        case 217: E217(); break;
-        case 218 : E218(); break;
-        case 34 : E34(); break;
-        case 310 : E310(); break;
-        case 435 : E435(); break;
-        case 52: E52(); break;
-        case 53 : E53(); break;
-        case 56 : E56(); break;
-        case 57 : E57(); break;
-        case 58 : E58(); break;
-        case 59 : E59(); break;
-        case 510 : E510(); break;
-        case 511 : E511(); break;
-        case 512 : E512(); break;
+        case 217: E217(); break; case 218 : E218(); break;
+        case 34 : E34(); break; case 310 : E310(); break;
+        case 435 : E435(); break; case 52: E52(); break;
+        case 53 : E53(); break; case 56 : E56(); break;
+        case 57 : E57(); break; case 58 : E58(); break;
+        case 59 : E59(); break; case 510 : E510(); break;
+        case 511 : E511(); break; case 512 : E512(); break;
         case 513 : E513(); break;
         default : printf("다시 읽고 실행하세요.\n"); return 0; 
     }
@@ -114,10 +107,12 @@ int E217() {
     int aValue = 10, bValue;
 
     aValue++;
-    printf("%d\t%d\t%d\t%d\n", aValue, ++aValue, aValue--, aValue);
+    printf("%d ", aValue);
+    printf("%d ", ++aValue);
+    printf("%d ", aValue--);
+    printf("%d\n", aValue);
 
-    bValue = ++aValue * 10;
-    printf("aValue = %d, bValue = %d\n", aValue, bValue);
+    printf("aValue = %d, bValue = %d\n", aValue, ++aValue * 10);
 
     aValue += 10; // aValue = aVaule + 10;
     printf("aValue += 10 ==> %d\n", aValue);
@@ -160,6 +155,8 @@ int E310() {
     // #include <stdlib.h>
 
     int a = rand(), b = rand(), c = rand();
+
+    // Mark
     double x = (double) rand() / ((long) RAND_MAX + 1), \
            y = (double) rand() / ((long) RAND_MAX + 1), \
            z = (double) rand() / ((long) RAND_MAX + 1);
