@@ -1,12 +1,13 @@
 // A class should always start with an uppercase first letter.
 // Also, the class name must be matched with file name.
 public class Learning {
-    public static void main(String[] args) {
+    public void main(String[] args) {
         printHW();
-
+        tVariables();
+        tPrint();
     }
 
-    public static void printHW() {
+    public void printHW() {
         System.out.println("Hello World!");
     }
 
