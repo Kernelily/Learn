@@ -4,14 +4,14 @@ public class Learning {
 
     final String howOld = "얼마나 살았니?";
 
-    // final 키워드를 사용하면 변수를 상수로 만듦.
-    // 따라서 howOld = '17살'과 같이 다시 선언할 경우 에러.
+    // With "final" keyword, We can declare variable as constant.
+    // So if we declare like "howOld = '17'" again, it will give us an error.
 
     long stupidNum = 312312345670L;
     // Note that you should end the value with an "L":
 
     float f1 = 35E3f;
-    // E or e 키워드를 이용하여 power of 10을 묘사가능.
+    // With E or e suffix, we can set power of 10.
 
     public static void main(String[] args) {
         System.out.println("Hell world!");
@@ -23,10 +23,10 @@ public class Learning {
     /* Widening & Narrowing Casting
      * Widening (auto)
      * Narrowing (manual)
-     * L (int), (float) 과 같이 parthenese안에 데이터타입 기재
-     * 9.78을 (int)로 캐스팅하면, 9가 나온다!
+     * L Add (int), (float) front of variable
+     * For example (int) 9.78 = 9
      */
-   
+
     public static void testLength() {
         String txt = "Stupid World!";
         
@@ -86,21 +86,13 @@ public class Learning {
         int presentDay = 4;
 
         switch (presentDay) {
-            case 1:
-                System.out.println("Monday!");
-                break;
-            case 2:
-                System.out.println("Tuesday!");
-                break;
-            case 3:
-                System.out.println("Wednesday!");
-                break;
-            case 4:
-                System.out.println("Worth Nothing!");
-                break;
+            case 1: System.out.println("Monday!"); break;
+            case 2: System.out.println("Tuesday!"); break;
+            case 3: System.out.println("Wednesday!"); break;
+            case 4: System.out.println("Worth Nothing!"); break;
             // and so on...
-            default:
-                System.out.println("Input was WRONG!");
+
+            default: System.out.println("Input was WRONG!");
 
             // When Java reaches a break keyword, it breaks out of the switch block.
             // This will stop the execution of more code and case testing inside the block.
@@ -118,11 +110,12 @@ public class Learning {
         }
 
         // Do/While Loop
-        // 일반적인 While문과의 차이점.. => While 루프 전에 한번 실행하고 루프 진입.
+        // The do/while loop is a variant of the while loop.
+        // Syntax =>
+        //
         // do {
         //    Code;
-        // }
-        // while (condition);
+        // } while (condition);
         
         int k = 0;
         do {
