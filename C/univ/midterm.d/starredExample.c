@@ -51,6 +51,7 @@ int main() {
 
     printf("예제 번호 => ");
     scanf("%d", &funcNum);
+
     printf("\n");
 
     switch (funcNum) {
@@ -112,7 +113,7 @@ int E217() {
     printf("%d ", aValue--);
     printf("%d\n", aValue);
 
-    printf("aValue = %d, bValue = %d\n", aValue, ++aValue * 10);
+    printf("aValue = %d, bValue = %d\n", aValue, bValue = aValue * 10);
 
     aValue += 10; // aValue = aVaule + 10;
     printf("aValue += 10 ==> %d\n", aValue);
@@ -156,7 +157,6 @@ int E310() {
 
     int a = rand(), b = rand(), c = rand();
 
-    // Mark
     double x = (double) rand() / ((long) RAND_MAX + 1), \
            y = (double) rand() / ((long) RAND_MAX + 1), \
            z = (double) rand() / ((long) RAND_MAX + 1);

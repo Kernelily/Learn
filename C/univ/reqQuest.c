@@ -7,7 +7,6 @@
  *
  *        Version:  1.0
  *        Created:  03/30/23 04:48:41
- *       Revision:  none
  *       Compiler:  gcc
  *
  *         Author:  정재윤 (Kernel), 

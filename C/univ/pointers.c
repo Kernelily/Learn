@@ -16,13 +16,9 @@ int main() {
     printf("Enter Function Name => ");
     scanf("%s", funcName);
 
-    if (strcmp(funcName, "createPointers") == 0) {
-        createPointers();
-    } else if (strcmp(funcName, "ptrAndArrays") == 0) {
-        ptrAndArrays(); 
-    } else {
-        return main();
-    }
+    if (strcmp(funcName, "createPointers") == 0) createPointers();
+    else if (strcmp(funcName, "ptrAndArrays") == 0) ptrAndArrays(); 
+    else return main();
 }
 
 /*
