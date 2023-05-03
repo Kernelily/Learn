@@ -144,4 +144,66 @@ for i in 0..<4 {
 // Prints "total is 6"
 print("total is \(total)");
 
+// Functions and Closures
+// Use "func" to declare a function.
+// Use "->" to seperate the parameter names and types from the function’s return type.
+// By default, functions use their parameter names as labels for their arguments.
+// Write a custom argument label before the parameter name, or write _ to use no argument label.
+func greet(_ person: String, day: String) -> String {
+    return "Hello \(person), today is \(day).";
+}
 
+print(greet(person: "Kernel", day: "Wednesday"));
+
+// Use a tuple to make a compound value—for example, to return multiple values from a function.
+// The elements of a tuple can be referred to either by name or by number.
+func calculateStatistics(scores: [Int]) -> (min: Int, max: Int, sum: Int) {
+    var min = scores[0];
+    var max = scores[0];
+    var sum = 0;
+
+    for score in scores {
+        if (score > max) {
+            max = score;
+        } else if (score < min) {
+            min = score;
+        }
+
+        sum += score;
+    }
+
+    return (min, max, sum);
+}
+
+let statistics = calculateStatistics(scores: [5, 3, 100, 3, 9]);
+
+// Both prints "120"
+print(statistics.sum);
+print(statistics.2);
+
+// Functions can be nested. Nested functions have access to variables that were declared in the outer function.
+func returnFifteen() -> Int {
+    var y = 10;
+
+    func add() {
+        y += 5;
+    }
+
+    add();
+
+    return y;
+}
+
+returnFifteen();
+
+// Functions are a first-class type. This means that a function can return another function as its value.
+func makeIncrementer() -> ((Int) -> Int) {
+    func addOne(number: Int) -> Int {
+        return 1 + number;
+    }
+
+    return addOne;
+}
+
+var increment = makeIncrementer();
+increment(7);
