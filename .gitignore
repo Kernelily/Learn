@@ -5,12 +5,7 @@
 *.swp
 
 # Ignore Compiled
-C/target/**
-C++/target/**
-Java/target/**
-Rust/target/**
-Swift/target/**
-
+target/
 build/
 
 ## But not to omit target folder
