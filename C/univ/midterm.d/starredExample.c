@@ -33,8 +33,6 @@ int E57(); int E58(); int E59();
 int E510(); int E511(); int E512();
 int E513();
 
-// more
-
 /*
  * Main Function Region
  */
