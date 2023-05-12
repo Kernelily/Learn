@@ -1,4 +1,20 @@
 /*
+ * =====================================================================================
+ *
+ *       Filename:  050823.c
+ *
+ *    Description:  Highlighted Example
+ *
+ *        Version:  1.0
+ *        Created:  04/21/23 10:31:25
+ *       Compiler:  gcc
+ *
+ *         Author:  정재윤 (@__77.4_),
+ *   Organization:  YONSEI UNIVERSITY
+ *
+ * =====================================================================================
+ */
+/*
  * Import Area
  */
 #include <stdlib.h>
