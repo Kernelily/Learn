@@ -52,7 +52,7 @@ int EXERCISE1() {
             } else {
                 if (str[i - 1] >= '0' && str[i - 1] <= '9') {
                     // 숫자가 두 자리 숫자이면 두 자리 숫자에 대해서만 처리
-                    for (int j = 0; j < (str[i - 1] - '0') * 10 + (str[i] - '0'); j++) {
+                    for (int j = 0; j < N; j++) {
                         printf("%c", ((str[i] - '0') + 10 * (str[i - 1] - '0')) + 'A' - 1);
                     }
 
