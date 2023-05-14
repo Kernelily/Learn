@@ -145,6 +145,31 @@ int EXERCISE3() {
 }
 
 int EXERCISE4() {
+    char input[100];
+    
+    // Get Input
+    printf("Input => "); scanf("%s", input);
+
+    // Check Input
+    for (int i = 0; input[i] != '\0'; i++) {
+        if (input[i] != '+' && input[i] != '-' && input[i] != '*' && input[i] != '/' && input[i] < '0' && input[i] > '9') {
+            printf("Wrong Input\n");
+            return 0;
+        }
+    }
+
+    // Get Index of Number
+    // Also Get Index of Operator
+    for (int i = 0; input[i] != '\0'; i++) {
+        if (input[i] >= '0' && input[i] <= '9') {
+            printf("Index of Number : %d\n", i);
+        } else if (input[i] == '+' || input[i] == '-' || input[i] == '*' || input[i] == '/') {
+            printf("Index of Operator : %d\n", i);
+        }
+    }
+
+    // Calculate
+
 
     return 0;
 }
