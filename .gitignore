@@ -9,11 +9,11 @@ target/
 build/
 
 ## But not to omit target folder
-!C/target/target.md
-!C++/target/target.md
-!Java/target/target.md
-!Rust/target/target.md
-!Swift/target/target.md
+!C/target/README.md
+!C++/target/README.md
+!Java/target/README.md
+!Kotlin/target/README.md
+!Swift/target/README.md
 
 # Ignore Log & Configuration
 config/
