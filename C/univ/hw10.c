@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 int EXERCISE1(); int EXERCISE2();
 int EXERCISE3(); int EXERCISE4();
@@ -80,6 +81,60 @@ int EXERCISE1() {
 }
 
 int EXERCISE2() {
+    char input[21];
+    printf("Input / operator numA numB => "); scanf("%s", input);
+
+    // Split Input
+    char operator[4]; int numA = 0, numB = 0;
+    
+    // Copy Operator
+    for (int i = 0; i < 3; i++) {
+        if (input[i] == '\0') break;
+
+        operator[i] = input[i];
+    }
+
+    // Get Space Index Number
+    int spaceIndexLeft = 0;
+    int spaceIndexRight = 0;
+
+    for (int i = 0; input[i] != '\0'; i++) {
+        // Space (Left or Right)
+        if (input[i] == ' ') {
+            // Space from left
+            if (spaceIndexLeft == 0) {
+                spaceIndexLeft = i;
+            } else {
+                // Space from right
+                spaceIndexRight = i;
+            }
+
+            break;
+        }
+    }
+
+    printf("Space Index Left : %d, Right : %d\n", spaceIndexLeft, spaceIndexRight);
+
+    // Get Number
+    // numA
+    for (int i = spaceIndexLeft + 1; i < spaceIndexRight; i++) {
+        // Base 10 Calculation
+        for (int j = 0; j < spaceIndexRight; j++) {
+            numA += 10 * j * (input[i] - '0');
+        }
+    }
+
+    // numB
+    for (int i = spaceIndexRight + 1; input[i] < 21; i++) {
+        // Base 10 Calculation
+        for (int j = 0; j < 21; j++) {
+            if (input[i] == '\0') break;
+            numB += 10 * j * (input[i] - '0'); 
+        }
+    }
+
+    // Calculate Integer
+    printf("O : %s, A : %d, B : %d\n", operator, numA, numB);
 
     return 0;
 }
