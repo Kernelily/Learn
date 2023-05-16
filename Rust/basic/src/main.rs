@@ -1,9 +1,12 @@
+const A_TEST_CONSTANT: bool = true;
+
 fn main() {
     varmut(); datatypes(); func_params(5, '😂'); func_expressions();
-    ctrl_flow();
+    ctrl_flow(); change_datatype();
     
     let x: i32 = func_return(6);
     println!("Hello, world!\nThe value of x is: {x}");
+    println!("The value of A_TEST_CONSTANT is: {}", A_TEST_CONSTANT);
 }
 
 // Variables and Mutability
@@ -296,4 +299,17 @@ fn ctrl_flow() {
         println!("{}!", number);
     }
     println!("LIFTOFF!!!");
+}
+
+// Change DataType
+fn change_datatype() {
+    let var_a = 13u8;
+    let var_b = 7u32;
+
+    let var_c = var_a as u32 + var_b;
+
+    println!("The final value is: {}", var_c);
+
+    let boolean_a = true; 
+    println!("The value of boolean_a is: {}", boolean_a);
 }
