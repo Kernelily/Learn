@@ -35,6 +35,7 @@ async fn main() -> std::io::Result<()> {
             .route("/hey", web::get().to(manual_hello))
     })
     .bind(("0.0.0.0", 8080))?
+    .workers(4)
     .run()
     .await
     // Finally, the app is started inside an HttpServer which will serve incoming requests using your App as an "application factory".
