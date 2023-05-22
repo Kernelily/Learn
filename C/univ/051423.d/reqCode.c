@@ -18,7 +18,7 @@ int getLocNumber(const char *city);
 /*
  * Constant Values
  */
-const char*cityList[MAX_CITIES] = {"SEOUL", "BUSAN"};
+const char *cityList[MAX_CITIES] = {"SEOUL", "BUSAN"};
 int seatInfo[MAX_CITIES][MAX_SEATS] = {0};
 
 /*
@@ -43,7 +43,7 @@ int main() {
         case 3: changeSeat(); break;
         case 4: cancelSeat(); break;
         case 5: printf("고속버스를 이용해주셔서 감사합니다.\n"); break;
-        default: printf("잘못된 입력입니다.\n"); return 1;;
+        default: printf("잘못된 입력입니다.\n"); return 1;
     }
 
     return 0;
